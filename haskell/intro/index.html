@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Haskell zine: intro</title>
+        <style>@font-face {
+    font-family: 'threemedium';
+    src: url('https://alicja.dev/assets/fonts/three.eot');
+    src: url('https://alicja.dev/assets/fonts/three.eot?#iefix') format('embedded-opentype'),
+        url('https://alicja.dev/assets/fonts/three.woff2') format('woff2'),
+        url('https://alicja.dev/assets/fonts/three.woff') format('woff'),
+        url('https://alicja.dev/assets/fonts/three.ttf') format('truetype'),
+        url('https://alicja.dev/assets/fonts/three.svg#threemedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font: 18px Verdana, sans-serif;
+    font: 36px "threemedium";
+}
+
+.zine {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/*  COLOURS
+    purple-0: #8f4898
+    purple-1: #a846a0
+    purple-2: #c45ab3
+    pink-0:   #ee4266
+    orange:   #ff6700
+    pink-1:   #ffa69e
+    yellow:   #fed766
+    green:    #23ce6b
+    teal:     #3bceac
+    blue:     #009fb7
+    grey-0:   #45454e
+    grey-1:   #b2b3b8
+    grey-2:   #c7c5c6
+    white:    #e8e6e7
+    h-purple: #ce97fb
+    h-pink:   #f6a5eb
+    h-orange: #faa99d
+    h-yellow: #fddf7e
+    h-teal:   #9bfbe1
+    h-blue:   #67ebfa
+*/
+.first {
+    color: #ee4266;
+}
+.second {
+    color: #ff6700;
+}
+.third {
+    color: #23ce6b;
+}
+.fourth {
+    color: #009fb7;
+}
+.fifth {
+    color: #8f4898;
+}
+
+span, ul {
+    display: inline-block;
+}
+.description {
+    display: inline-flex;
+}
+
+span {
+    width: 180px;
+    font-size: 1.2em;
+}
+
+ul {
+    width: 540px;
+    margin: 10px 0;
+}
+
+
+@media print {
+    @page { size: auto portrait; margin: 0cm; }
+    .zine { margin: 1cm }
+}</style>
+    </head>
+    <body>
+        <div class="zine">
+            <div class="head_section">
+    <h1>Haskell is a</h1>
+    <div class="element">
+        <span class="first">purely</span>
+        <div class="description">
+            <ul>
+                <li>has referential transparency - expressions are like LEGO blocks</li>
+                <li>an expression evaluates to the same result regardless of context</li>
+                <li>the same input produces the same output</li>
+            </ul>
+        </div>
+    </div>
+    <div class="element">
+        <span class="second">functional</span>
+        <div class="description">
+            <ul>
+                <li>functions are first-class objects - can be used as values and passed as arguments</li>
+                <li>programs are declarative - they describe the logic of the computation and not the control flow</li>
+                <li>the output value of a function depends only on arguments that are passed to the function</li>
+            </ul>
+        </div>
+    </div>
+    <div class="element">
+        <span class="third">polymorphic</span>
+        <div class="description">
+            <ul>
+                <li>
+                    code can be written without mentioning specific types and use methods for groups of types
+                    e.g. all values of typeclass Num can use addition
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="element">
+        <span class="fourth">statically typed</span>
+        <div class="description">
+            <ul>
+                <li>
+                    the type of a variable is known at compile time - using either specific type declarations
+                    or type inference (type is decided by the compiler)
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="element">
+        <span class="fifth">lazy</span>
+        <div class="description">
+            <ul>
+                <li>it only evaluates expressions when it really has to</li>
+            </ul>
+        </div>
+    </div>
+    <h1>programming language</h1>
+</div>
+        </div>
+    </body>
+</html>
