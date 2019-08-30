@@ -1,28 +1,43 @@
 # css-zines
 
-Making a zine using HTML and CSS.
+This repository includes a setup for generating pure HTML and CSS zines.
+I wrote the scripts by hand, to practice some freehand Node, so it's not using
+any libraries outside of the standard Node library.
 
-Requirements (~ are nice-haves):
-- output: single HTML file, ready for printing
-- layout using CSS
-    - ~CSS grid?
-    - add CSS styles for printing
-- text marked for translation
-- including images
-- adding accessibility support:
-    - changing fonts (from cute handwritten one to a readable one)
-    - ~increasing text easily
-    - ~dark mode
-- use handwritten font
-    - ~create a monospace version of the font
+The setup is in the `build` directory.
+Usage: `./bin/index.js <filepath> <command>`
+
+Commands:
+- `setup` - creates initial directory and files for a zine
+- `build` - builds the zine from files in the zine directory
+- `watch` - watches for file changes in `partials` and `styles` directories
 
 # plan
 
-1. Use existing Haskell notes to write a zine in HTML + CSS
-2. Repeat the process for another two notes, to get the commonalities
-3. Create partials for common elements
-4. Create a setup for generating common elements
-5. Publish a few pages for review
+- [x] Use an existing Haskell note to write a zine in HTML + CSS
+- [x] Repeat the process for another note, to get the commonalities
+- [ ] Create partials for common elements
+- [ ] Create an initial setup for generating zines
+- [ ] Publish a few pages for review (in progress)
+
+## to-dos (~ are nice-haves):
+- [x] output: single HTML file, ready for printing
+- layout using CSS
+    - ~CSS grid?
+    - [x] add CSS styles for printing
+- [ ] text marked for translation
+- [ ] including images
+- adding accessibility support:
+    - [ ] changing fonts (from cute handwritten one to a readable one)
+    - [ ] ~increasing text easily
+    - [ ] ~dark mode
+- [x] use handwritten font
+- [ ] ~create a monospace version of the font
+- [ ] minimize CSS
+- [ ] add CSS variables
+- [ ] use CSS partials
+- [ ] add variables to HTML partials
+- [ ] improve regexp for putting CSS in the `<style>` tag
 
 ## resources
 

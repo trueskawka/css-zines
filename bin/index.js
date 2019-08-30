@@ -20,7 +20,7 @@ if (!cmd) {
     console.error('Missing command for the script!');
 }
 
-const cssPath = path.join(zinePath, 'css');
+const cssPath = path.join(zinePath, 'styles');
 const partialsPath = path.join(zinePath, 'partials');
 
 // watch partials and CSS files for changes, rebuild
@@ -46,7 +46,7 @@ switch(cmd) {
         build.build(zinePath, partialsPath, cssPath);
         break;
     // watch and build on changes
-    case 'dev':
+    case 'watch':
         build.build(zinePath, partialsPath, cssPath);
         watch();
         break;
@@ -54,17 +54,3 @@ switch(cmd) {
         console.error(`Error: Command ${cmd} not implemented!`)
         break;
 }
-
-
-
-// console.log(process.argv.slice(2));
-// text.split(/\r?\n/).forEach(function (line) {
-//     console.log(line);
-// });
-// const text = fs.readFileSync('kitten', "utf8");
-// fs.appendFileSync('kitten', '456', 'utf8');
-// remove previous output file before generating (not necessary, overwritten)
-// fs.unlinkSync(indexFile);
-
-// const zineDir = path.parse(zinePath);
-// const outputFile = zinePath.name();
