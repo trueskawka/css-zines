@@ -28,7 +28,7 @@ Commands:
 - [ ] text marked for translation
 - [ ] including images
 - adding accessibility support:
-    - [ ] changing fonts (from cute handwritten one to a readable one)
+    - [x] changing fonts (from cute handwritten one to a readable one)
     - [ ] ~increasing text easily
     - [ ] ~dark mode
 - [x] use handwritten font
@@ -38,6 +38,7 @@ Commands:
 - [ ] use CSS partials
 - [ ] add variables to HTML partials
 - [ ] improve regexp for putting CSS in the `<style>` tag
+- [ ] add a `build-all` command for zines in a directory
 
 ## resources
 

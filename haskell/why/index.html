@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Haskell zine: why am I learning Haskell?</title>
+        <style>@font-face {
+    font-family: 'threemedium';
+    src: url('https://alicja.dev/assets/fonts/three.eot');
+    src: url('https://alicja.dev/assets/fonts/three.eot?#iefix') format('embedded-opentype'),
+        url('https://alicja.dev/assets/fonts/three.woff2') format('woff2'),
+        url('https://alicja.dev/assets/fonts/three.woff') format('woff'),
+        url('https://alicja.dev/assets/fonts/three.ttf') format('truetype'),
+        url('https://alicja.dev/assets/fonts/three.svg#threemedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font: 18px Verdana, sans-serif;
+    font: 36px "threemedium";
+    margin-top: 20px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+#verdana + label,
+#three + label {
+    margin-right: 30px;
+    cursor: pointer;
+    color: #000;
+    float: right;
+}
+
+#verdana + label {
+    font: 24px Verdana, sans-serif;
+}
+
+#three + label {
+    font: 36px "threemedium";
+}
+
+#three:checked + .three-label {
+    color: #b2b3b8;
+    display: none;
+}
+
+#verdana:checked + .verdana-label {
+    color: #b2b3b8;
+    display: none;
+}
+
+#three:checked ~ .zine {
+    font: 36px "threemedium";
+}
+
+#verdana:checked ~ .zine {
+    font: 18px Verdana, sans-serif;
+}
+
+.zine {
+    margin: auto;
+    max-width: 840px;
+}
+
+@media print {
+    @page { size: auto portrait; margin: 0cm; }
+    .zine { margin: 1cm; -webkit-print-color-adjust: exact; }
+    #verdana + label, #three + label { display: none; }
+}
+
+/*  COLOURS
+    purple-0: #8f4898
+    purple-1: #a846a0
+    purple-2: #c45ab3
+    pink-0:   #ee4266
+    orange:   #ff6700
+    pink-1:   #ffa69e
+    yellow:   #fed766
+    green:    #23ce6b
+    teal:     #3bceac
+    blue:     #009fb7
+    grey-0:   #45454e
+    grey-1:   #b2b3b8
+    grey-2:   #c7c5c6
+    white:    #e8e6e7
+    h-purple: #ce97fb
+    h-pink:   #f6a5eb
+    h-orange: #faa99d
+    h-yellow: #fddf7e
+    h-teal:   #9bfbe1
+    h-blue:   #67ebfa
+*/
+
+.haskell {
+    display: inline-block;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    width: 112.5px;
+    height: 72px;
+    color: #a846a0;
+
+    background:
+        
+        
+        linear-gradient(
+        -122.5deg,
+        transparent 37%,
+        #101c24 38%,
+        #101c24 62%,
+        transparent 63%
+        ) 0 0,
+        
+        linear-gradient(
+        122.5deg,
+        transparent 37%,
+        #101c24 38%,
+        #101c24 62%,
+        transparent 63%
+        ) 0 36px,
+
+        
+        
+        linear-gradient(
+        -122.5deg,
+        transparent 37%,
+        currentColor 38%,
+        currentColor 62%,
+        transparent 63%
+        ) 22.5px 0,
+        
+        linear-gradient(
+        122.5deg,
+        transparent 37%,
+        currentColor 38%,
+        currentColor 62%,
+        transparent 63%
+        ) 22.5px 36px,
+        
+        linear-gradient(
+        -122.5deg,
+        transparent 37%,
+        currentColor 38%,
+        currentColor 62%,
+        white 63%
+        ) 45.5px 36px,
+
+        
+        
+        linear-gradient(
+        -122.5deg,
+        transparent 37%,
+        white 38%,
+        white 62%,
+        transparent 63%
+        ) 30px 0,
+        
+        linear-gradient(
+        -122.5deg,
+        transparent 37%,
+        white 38%,
+        white 62%,
+        transparent 63%
+        ) 53px 36px,
+
+        
+        
+        linear-gradient(
+        to bottom,
+        white 57%,
+        #101c24 57%,
+        #101c24 91%,
+        white 92%
+        ) 53px 0,
+        
+        linear-gradient(
+        to bottom,
+        white 8%,
+        #101c24 8%,
+        #101c24 42%,
+        white 43%
+        ) 53px 36px;
+
+    background-size: 39px 36px;
+    background-repeat: no-repeat;
+}</style>
+    </head>
+    <body>
+                <input id="verdana" type="radio" name="font">
+        <label for="verdana" class="font-button verdana-label">Verdana</label>
+
+        <input id="three" type="radio" name="font" checked>
+        <label for="three" class="font-button three-label">Three</label>
+        <div class="zine">
+                    <div class="reasons">
+            <h2>Why am I learning Haskell? <div class="haskell"></div></h2>
+            <ol>
+                <li>Because it's different from the languages I know!</li>
+                <li>Because it's fun - a great way of nerd-sniping myself every day!</li>
+                <li>Because functional programming becomes more and more relevant!</li>
+                <li>Because it's challenging!</li>
+                <li>Because I wanted to make some new friends!</li>
+            </ol>
+            <h2>Why do YOU want to learn Haskell?</h2>
+            <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            <ol>
+        </div>
+        </div>
+    </body>
+</html>
