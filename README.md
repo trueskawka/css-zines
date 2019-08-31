@@ -35,7 +35,7 @@ Commands:
 - [ ] ~create a monospace version of the font
 - [x] minimize CSS (mostly)
 - [x] add CSS variables
-- [ ] use CSS partials
+- [x] use CSS partials
 - [ ] add variables to HTML partials
 - [ ] improve regexp for putting CSS in the `<style>` tag
 - [ ] add a `build-all` command for zines in a directory

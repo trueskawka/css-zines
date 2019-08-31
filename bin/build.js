@@ -14,6 +14,7 @@ const buildHTML = (partialsPath, css) => {
         partials.forEach((partial) => {
             const fileName = partial.replace(/[{|}| ]/g, '');
             const filePath = path.join(partialsPath, `${fileName}.html`);
+            
             let file = '';
             if (!fs.existsSync(filePath)) {
                 console.error(`Partial ${fileName} missing, skipping`);
@@ -35,6 +36,25 @@ const buildCSS = (cssPath) => {
     const inputPath = path.join(cssPath, 'main.scss');
     let css = fs.readFileSync(inputPath, 'utf-8');
 
+    // 1. get all the CSS partials (if any exist)
+    //    put them in placeholder spots
+    const partialsRegExp = new RegExp(/@include .+;$/g);
+    const partials = css.match(partialsRegExp);
+
+    if (partials) {
+        partials.forEach((partial) => {
+            const fileName = partial.replace(/@include |;/g, '');
+            const filePath = path.join(cssPath, `${fileName}.scss`);
+            let file = '';
+            if (!fs.existsSync(filePath)) {
+                console.error(`SCSS file ${fileName} missing, skipping`);
+            } else {
+                file = fs.readFileSync(filePath, 'utf-8');
+            }
+            css = css.replace(partial, file);
+        })
+    }
+
     // 0. add variables for colors
     const variableRegExp = new RegExp(/\$.+;/g);
     const variables = css.match(variableRegExp);
@@ -45,10 +65,6 @@ const buildCSS = (cssPath) => {
             css = css.replace(variable, colors[value] + ';');
         })
     }
-
-    // 1. get all the CSS partials (if any exist)
-    //    put them in placeholder spots
-    // TO-DO
 
     // 2. remove comments
     css = css.replace(/\/\*.*\*\//g, '');
