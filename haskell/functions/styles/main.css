@@ -13,11 +13,57 @@
 body {
     font: 18px Verdana, sans-serif;
     font: 36px "threemedium";
+    margin-top: 20px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+#verdana + label,
+#three + label {
+    margin-right: 30px;
+    cursor: pointer;
+    color: #000;
+    float: right;
+}
+
+#verdana + label {
+    font: 24px Verdana, sans-serif;
+}
+
+#three + label {
+    font: 36px "threemedium";
+}
+
+#three:checked + .three-label {
+    color: #b2b3b8;
+    display: none;
+}
+
+#verdana:checked + .verdana-label {
+    color: #b2b3b8;
+    display: none;
+}
+
+#three:checked ~ .zine {
+    font: 36px "threemedium";
+}
+
+#verdana:checked ~ .zine {
+    font: 18px Verdana, sans-serif;
 }
 
 .zine {
-    width: 840px;
-    margin: 0 auto;
+    margin: auto;
+    max-width: 840px;
+}
+
+@media print {
+    @page { size: auto portrait; margin: 0cm; }
+    .zine { margin: 1cm; -webkit-print-color-adjust: exact; }
+    #verdana + label, #three + label { display: none; }
 }
 
 /*  COLOURS
@@ -42,6 +88,52 @@ body {
     h-teal:   #9bfbe1
     h-blue:   #67ebfa
 */
+
+h1, h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+.element, .label {
+    display: inline-block;
+}
+.example {
+    height: 4em;
+    margin-bottom: 20px;
+}
+.label {
+    width: 120px;
+    text-transform: uppercase;
+}
+.annotation, .value {
+    display: block;
+    min-width: 60px;
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+.annotation {
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+.value {
+    width: 120px;
+}
+.type {
+    color: #009fb7;
+}
+.function {
+    color: #ee4266;
+}
+.operator {
+    width: 60px;
+    text-align: center;
+}
+.body {
+    width: auto;
+    max-width: 500px;
+}
+.comment {
+    color: #b2b3b8;
+}
 
 @media print {
     @page { size: auto portrait; margin: 0cm; }
