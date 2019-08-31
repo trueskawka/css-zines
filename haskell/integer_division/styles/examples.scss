@@ -1,0 +1,50 @@
+.zine {
+  max-width: 540px;
+}
+
+.quotrem {
+  color: $orange;
+}
+
+.divmod {
+  color: $green;
+}
+
+.example {
+  max-width: 640px;
+}
+
+ul {
+  margin-top: 0;
+}
+
+.equation {
+  margin: 20px 0;
+}
+
+.equation-line {
+  font-size: 1.5em;
+  display: inline-block;
+  width: 260px;
+}
+
+.eq {
+  display: block;
+  float: left;
+  margin-right: 10px;
+  // min-width: 40px;
+}
+
+.results {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.result {
+  float: left;
+  width: 40px;
+}
+
+.section-title {
+  margin: 10px 0;
+}

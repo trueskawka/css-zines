@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Haskell: integer division</title>
+        <style>@font-face{font-family:'threemedium';src:url('https://alicja.dev/assets/fonts/three.eot');src:url('https://alicja.dev/assets/fonts/three.eot?#iefix') format('embedded-opentype'),url('https://alicja.dev/assets/fonts/three.woff2') format('woff2'),url('https://alicja.dev/assets/fonts/three.woff') format('woff'),url('https://alicja.dev/assets/fonts/three.ttf') format('truetype'),url('https://alicja.dev/assets/fonts/three.svg#threemedium') format('svg');font-weight:normal;font-style:normal}body{font:18px Verdana, sans-serif;font:36px "threemedium";margin-top:20px;text-align:right}input[type="checkbox"], input[type="radio"]{position:absolute;visibility:hidden}#verdana + label,#three + label{margin-right:30px;cursor:pointer;color:#000}#verdana + label{font:18px Verdana, sans-serif}#three + label{font:36px "threemedium"}#three:checked + .three-label{color:#b2b3b8;display:none}#verdana:checked + .verdana-label{color:#b2b3b8;display:none}#three:checked ~ .zine{font:36px "threemedium"}#verdana:checked ~ .zine{font:18px Verdana, sans-serif}.zine{margin:0 auto;max-width:840px;text-align:left}@media print{@page{ size:auto portrait; margin:0cm; }.zine{ margin:1cm; -webkit-print-color-adjust:exact; }#verdana + label, #three + label{ display:none; }}.zine{max-width:540px}.quotrem{color:#ff6700}.divmod{color:#23ce6b}.example{max-width:640px}ul{margin-top:0}.equation{margin:20px 0}.equation-line{font-size:1.5em;display:inline-block;width:260px}.eq{display:block;float:left;margin-right:10px;// min-width:40px}.results{display:inline-block;margin-left:40px}.result{float:left;width:40px}.section-title{margin:10px 0}</style>
+    </head>
+    <body>
+        <input id="verdana" type="radio" name="font">
+        <label for="verdana" class="font-button verdana-label">Verdana</label>
+
+        <input id="three" type="radio" name="font" checked>
+        <label for="three" class="font-button three-label">Three</label>
+
+        <div class="zine">
+            <h3>
+            Integer division in Haskell:
+                <span class="quotrem">quotRem</span> and 
+                <span class="divmod">divMod</span>
+            </h3>
+            <div class="example">
+  <span>They behave the same if all arguments are positive:</span>
+  <div class="equation">
+    <div class="equation-line">
+      <span class="eq number">3</span>
+      <span class="eq operator">/</span>
+      <span class="eq number">5</span>
+      <span class="eq operator">=</span>
+      <span class="eq number">0</span>
+      <span class="eq operator">+</span>
+      <span class="eq number">3/5</span>
+    </div>
+    <div class="results">
+      <div class="result-line">
+        <span class="result divmod">div</span>
+        <span class="result number">0</span>
+        <span class="result divmod">mod</span>
+        <span class="result number">3</span>
+      </div>
+      <div class="result-line">
+        <span class="result quotrem">quot</span>
+        <span class="result number">0</span>
+        <span class="result quotrem">rem</span>
+        <span class="result number">3</span>
+      </div>
+    </div>
+  <div class="equation">
+    <div class="equation-line">
+      <span class="eq number">5</span>
+      <span class="eq operator">/</span>
+      <span class="eq number">3</span>
+      <span class="eq operator">=</span>
+      <span class="eq number">1</span>
+      <span class="eq operator">+</span>
+      <span class="eq number">2/3</span>
+    </div>
+    <div class="results">
+      <div class="result-line">
+        <span class="result divmod">div</span>
+        <span class="result number">1</span>
+        <span class="result divmod">mod</span>
+        <span class="result number">2</span>
+      </div>
+      <div class="result-line">
+        <span class="result quotrem">quot</span>
+        <span class="result number">1</span>
+        <span class="result quotrem">rem</span>
+        <span class="result number">2</span>
+      </div>
+    </div>
+  </div>
+</div>
+            <div class="example">
+  <span>
+  Negative numbers show the difference:
+  <ul>
+    <li><span class="quotrem">quotrem</span> rounds towards 0</li>
+    <li><span class="divmod">divmod</span> rounds towards negative infinity</li>
+  </ul>
+  </span>
+  <div class="equation">
+    <div class="equation-line">
+      <span class="eq number">-3</span>
+      <span class="eq operator">/</span>
+      <span class="eq number">5</span>
+      <span class="eq operator">=</span>
+      <span class="eq number">0</span>
+      <span class="eq operator">-</span>
+      <span class="eq number">3/5</span>
+    </div>
+    <div class="results">
+      <div class="result-line">
+        <span class="result divmod">div</span>
+        <span class="result number">-1</span>
+        <span class="result divmod">mod</span>
+        <span class="result number">&nbsp;2</span>
+      </div>
+      <div class="result-line">
+        <span class="result quotrem">quot</span>
+        <span class="result number">&nbsp;0</span>
+        <span class="result quotrem">rem</span>
+        <span class="result number">-3</span>
+      </div>
+    </div>
+  <div class="equation">
+    <div class="equation-line">
+      <span class="eq number">-5</span>
+      <span class="eq operator">/</span>
+      <span class="eq number">3</span>
+      <span class="eq operator">=</span>
+      <span class="eq number">-1</span>
+      <span class="eq operator">-</span>
+      <span class="eq number">2/3</span>
+    </div>
+    <div class="results">
+      <div class="result-line">
+        <span class="result divmod">div</span>
+        <span class="result number">-2</span>
+        <span class="result divmod">mod</span>
+        <span class="result number">&nbsp;1</span>
+      </div>
+      <div class="result-line">
+        <span class="result quotrem">quot</span>
+        <span class="result number">-1</span>
+        <span class="result quotrem">rem</span>
+        <span class="result number">-2</span>
+      </div>
+    </div>
+  </div>
+</div>
+            <div class="example">
+  <div class="equation">
+    <div class="equation-line">
+      <span class="eq number">3</span>
+      <span class="eq operator">/</span>
+      <span class="eq number">-5</span>
+      <span class="eq operator">=</span>
+      <span class="eq number">0</span>
+      <span class="eq operator">-</span>
+      <span class="eq number">3/5</span>
+    </div>
+    <div class="results">
+      <div class="result-line">
+        <span class="result divmod">div</span>
+        <span class="result number">-1</span>
+        <span class="result divmod">mod</span>
+        <span class="result number">-2</span>
+      </div>
+      <div class="result-line">
+        <span class="result quotrem">quot</span>
+        <span class="result number">&nbsp;0</span>
+        <span class="result quotrem">rem</span>
+        <span class="result number">&nbsp;3</span>
+      </div>
+    </div>
+  <div class="equation">
+    <div class="equation-line">
+      <span class="eq number">5</span>
+      <span class="eq operator">/</span>
+      <span class="eq number">-3</span>
+      <span class="eq operator">=</span>
+      <span class="eq number">-1</span>
+      <span class="eq operator">-</span>
+      <span class="eq number">2/3</span>
+    </div>
+    <div class="results">
+      <div class="result-line">
+        <span class="result divmod">div</span>
+        <span class="result number">-2</span>
+        <span class="result divmod">mod</span>
+        <span class="result number">-1</span>
+      </div>
+      <div class="result-line">
+        <span class="result quotrem">quot</span>
+        <span class="result number">-1</span>
+        <span class="result quotrem">rem</span>
+        <span class="result number">&nbsp;2</span>
+      </div>
+    </div>
+  </div>
+</div>
+            <div class="rules">
+  <h3 class="section-title">Rules</h3>
+  <div class="rule">
+    <span>
+      (<span class="quotrem">quot</span> x y) * y
+      + (<span class="quotrem">rem</span> x y)
+      == x
+  </div>
+  <div class="rule">
+    <span>
+      (<span class="divmod">div&nbsp;</span> x y) * y
+      + (<span class="divmod">mod</span> x y)
+      == x
+  </div>
+</div>
+            <div class="usage">
+  <h3 class="section-title">Usage</h3>
+  <ul>
+    <li>check if a number is divisible:
+        <span class="quotrem">rem</span> x y == 0
+    </li>
+    <li>use for modular arithmetic (e.g. hours, weekdays):
+        <span class="divmod">mod</span> x y
+    </li>
+  </ul>
+</div>
+        </div>
+    </body>
+</html>
