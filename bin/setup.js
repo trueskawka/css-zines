@@ -6,6 +6,7 @@ const initialCSS = fs.readFileSync(path.join(__dirname, './main.css'));
 
 module.exports = {
     setup: function(zinePath, partialsPath, cssPath) {
+        console.log('Setting up the directory for the zine...');
         if (!fs.existsSync(zinePath)) {
             fs.mkdirSync(zinePath);
         }
@@ -19,5 +20,6 @@ module.exports = {
             fs.mkdirSync(cssPath);
         }
         fs.writeFileSync(path.join(cssPath, 'main.css'), initialCSS);
+        console.log(`Your directory is ready at ${zinePath}!`);
     }
 }
