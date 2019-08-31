@@ -30,7 +30,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 #verdana + label {
-    font: 24px Verdana, sans-serif;
+    font: 18px Verdana, sans-serif;
 }
 
 #three + label {
@@ -65,29 +65,6 @@ input[type="checkbox"], input[type="radio"] {
     .zine { margin: 1cm; -webkit-print-color-adjust: exact; }
     #verdana + label, #three + label { display: none; }
 }
-
-/*  COLOURS
-    purple-0: #8f4898
-    purple-1: #a846a0
-    purple-2: #c45ab3
-    pink-0:   #ee4266
-    orange:   #ff6700
-    pink-1:   #ffa69e
-    yellow:   #fed766
-    green:    #23ce6b
-    teal:     #3bceac
-    blue:     #009fb7
-    grey-0:   #45454e
-    grey-1:   #b2b3b8
-    grey-2:   #c7c5c6
-    white:    #e8e6e7
-    h-purple: #ce97fb
-    h-pink:   #f6a5eb
-    h-orange: #faa99d
-    h-yellow: #fddf7e
-    h-teal:   #9bfbe1
-    h-blue:   #67ebfa
-*/
 
 h1, h2 {
     text-transform: uppercase;

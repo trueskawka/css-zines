@@ -1,5 +1,6 @@
 const fs   = require('fs');
 const path = require('path');
+const colors = require('./colors.json');
 
 const buildHTML = (partialsPath, css) => {
     const inputPath = path.join(partialsPath, 'index.html');
@@ -31,21 +32,32 @@ const buildHTML = (partialsPath, css) => {
 }
 
 const buildCSS = (cssPath) => {
-    const inputPath = path.join(cssPath, 'main.css');
+    const inputPath = path.join(cssPath, 'main.scss');
     let css = fs.readFileSync(inputPath, 'utf-8');
 
     // 0. add variables for colors
-    // TO-DO
+    const variableRegExp = new RegExp(/\$.+;/g);
+    const variables = css.match(variableRegExp);
+
+    if (variables) {
+        variables.forEach((variable) => {
+            const value = variable.replace(/[$|;]/g, '');
+            css = css.replace(variable, colors[value] + ';');
+        })
+    }
 
     // 1. get all the CSS partials (if any exist)
     //    put them in placeholder spots
     // TO-DO
 
     // 2. remove comments
-    css = css.replace(/(\/\*.*\*\/)/g, '');
+    css = css.replace(/\/\*.*\*\//g, '');
 
-    // 3. remove whitespace
-    // css = css.replace(/\s/g,'');
+    // 3. remove most whitespace
+    css = css.replace(/\n[\s]*/g, '');
+    css = css.replace(/;}/g, '}');
+    css = css.replace(/ {/g, '{');
+    css = css.replace(/: /g, ':');
 
     return css;
 }

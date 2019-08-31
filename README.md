@@ -17,7 +17,7 @@ Commands:
 - [x] Use an existing Haskell note to write a zine in HTML + CSS
 - [x] Repeat the process for another note, to get the commonalities
 - [ ] Create partials for common elements
-- [ ] Create an initial setup for generating zines
+- [x] Create an initial setup for generating zines
 - [ ] Publish a few pages for review (in progress)
 
 ## to-dos (~ are nice-haves):
@@ -33,8 +33,8 @@ Commands:
     - [ ] ~dark mode
 - [x] use handwritten font
 - [ ] ~create a monospace version of the font
-- [ ] minimize CSS
-- [ ] add CSS variables
+- [x] minimize CSS (mostly)
+- [x] add CSS variables
 - [ ] use CSS partials
 - [ ] add variables to HTML partials
 - [ ] improve regexp for putting CSS in the `<style>` tag
