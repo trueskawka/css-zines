@@ -1,0 +1,44 @@
+.output {
+    color: $purple0;
+}
+
+.input {
+    color: $pink0;
+}
+
+.predicative {
+    color: $blue;
+}
+
+.comprehension-example {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.comprehension,
+.element,
+.operator,
+.comment,
+.aside {
+    display: inline-block;
+}
+
+.element,
+.comment {
+    width: 150px;
+    text-align: center;
+}
+
+.comment {
+    vertical-align: top;
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+.operator {
+    width: 5px;
+}
+
+.aside {
+    margin: 20px 0 0 210px;
+}

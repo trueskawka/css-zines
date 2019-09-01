@@ -38,6 +38,7 @@ Commands:
 - [x] use CSS partials
 - [ ] add variables to HTML partials
 - [ ] improve regexp for putting CSS in the `<style>` tag
+- [ ] make it easier to apply global styles to all existing zines
 - [ ] add a `build-all` command for zines in a directory
 
 ## resources
