@@ -1,0 +1,44 @@
+h1, h2 {
+    text-align: center;
+}
+.element, .label {
+    display: inline-block;
+}
+.example {
+    height: 4em;
+    margin-bottom: 20px;
+}
+.label {
+    width: 120px;
+    text-transform: uppercase;
+}
+.annotation, .value {
+    display: block;
+    min-width: 60px;
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+.annotation {
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+.value {
+    width: 120px;
+}
+.type {
+    color: #009fb7;
+}
+.function {
+    color: #ee4266;
+}
+.operator {
+    width: 60px;
+    text-align: center;
+}
+.body {
+    width: auto;
+    max-width: 500px;
+}
+.comment {
+    color: #b2b3b8;
+}

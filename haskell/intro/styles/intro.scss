@@ -1,0 +1,32 @@
+.first {
+    color: $pink0;
+}
+.second {
+    color: $orange;
+}
+.third {
+    color: $green;
+}
+.fourth {
+    color: $teal;
+}
+.fifth {
+    color: $purple1;
+}
+
+span, ul {
+    display: inline-block;
+}
+.description {
+    display: inline-flex;
+}
+
+span {
+    width: 180px;
+    font-size: 1.2em;
+}
+
+ul {
+    width: 540px;
+    margin: 10px 0;
+}

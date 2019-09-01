@@ -1,0 +1,97 @@
+.zine {
+    max-width: 540px;
+}
+
+.haskell {
+    display: inline-block;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    width: 112.5px;
+    height: 72px;
+    color: $purple1;
+
+    background:
+        /* black chevron */
+        /* upper part */
+        linear-gradient(
+        -122.5deg,
+        transparent 37%,
+        #101c24 38%,
+        #101c24 62%,
+        transparent 63%
+        ) 0 0,
+        /* lower part */
+        linear-gradient(
+        122.5deg,
+        transparent 37%,
+        #101c24 38%,
+        #101c24 62%,
+        transparent 63%
+        ) 0 36px,
+
+        /* yellow lambda */
+        /* upper part */
+        linear-gradient(
+        -122.5deg,
+        transparent 37%,
+        currentColor 38%,
+        currentColor 62%,
+        transparent 63%
+        ) 22.5px 0,
+        /* lower left part */
+        linear-gradient(
+        122.5deg,
+        transparent 37%,
+        currentColor 38%,
+        currentColor 62%,
+        transparent 63%
+        ) 22.5px 36px,
+        /* lower right part */
+        linear-gradient(
+        -122.5deg,
+        transparent 37%,
+        currentColor 38%,
+        currentColor 62%,
+        white 63%
+        ) 45.5px 36px,
+
+        /* white spacer */
+        /* upper part */
+        linear-gradient(
+        -122.5deg,
+        transparent 37%,
+        white 38%,
+        white 62%,
+        transparent 63%
+        ) 30px 0,
+        /* lower part */
+        linear-gradient(
+        -122.5deg,
+        transparent 37%,
+        white 38%,
+        white 62%,
+        transparent 63%
+        ) 53px 36px,
+
+        /* black lines */
+        /* upper line */
+        linear-gradient(
+        to bottom,
+        white 57%,
+        #101c24 57%,
+        #101c24 91%,
+        white 92%
+        ) 53px 0,
+        /* lower line */
+        linear-gradient(
+        to bottom,
+        white 8%,
+        #101c24 8%,
+        #101c24 42%,
+        white 43%
+        ) 53px 36px;
+
+    background-size: 39px 36px;
+    background-repeat: no-repeat;
+}
