@@ -14,7 +14,7 @@ const buildHTML = (partialsPath, css) => {
         partials.forEach((partial) => {
             const fileName = partial.replace(/[{|}| ]/g, '');
             const filePath = path.join(partialsPath, `${fileName}.html`);
-            
+
             let file = '';
             if (!fs.existsSync(filePath)) {
                 console.error(`Partial ${fileName} missing, skipping`);

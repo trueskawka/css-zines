@@ -1,0 +1,130 @@
+<div class="foldmap-example">
+    <div class="info-line">
+        <span class="fold">FOLD</span>: reduce a list by replacing each cons with the function
+    </div>
+    <div class="fold-example">
+        <div class="element">
+            <span class="value base fold">foldr</span>
+        </div>
+        <div class="element operator">
+            <span class="value operator">::</span>
+        </div>
+        <div class="element">
+            <span class="annotation">function</span>
+            <span class="value input-function">(a -> b)</span>
+        </div>
+        <div class="element operator">
+            <span class="value operator">-></span>
+        </div>
+        <div class="element">
+            <span class="annotation">base case</span>
+            <span class="value fold-base">b</span>
+        </div>
+        <div class="element operator">
+            <span class="value operator">-></span>
+        </div>
+        <div class="element">
+            <span class="annotation">takes initial list</span>
+            <span class="value">[ a ]</span>
+        </div>
+        <div class="element operator">
+            <span class="value operator">-></span>
+        </div>
+        <div class="element">
+            <span class="annotation">returns a value</span>
+            <span class="value"> b </span>
+        </div>
+    </div>
+    <div class="fold-example">
+        <div class="element">
+            <span class="value base fold">foldr</span>
+        </div>
+        <div class="element operator">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="value input-function">_</span>
+        </div>
+        <div class="element operator">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="value fold-base">z</span>
+        </div>
+        <div class="element">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="value">[ ]</span>
+        </div>
+        <div class="element">
+            <span class="value operator">=</span>
+        </div>
+        <div class="element">
+            <span class="value fold-base">z</span>
+        </div>
+    </div>
+    <div class="fold-example">
+        <div class="element">
+            <span class="value base fold">fold</span>
+        </div>
+        <div class="element">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="input-function value">f</span>
+        </div>
+        <div class="element operator">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="value fold-base">z</span>
+        </div>
+        <div class="element">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="value">(x:xs)</span>
+        </div>
+        <div class="element">
+            <span class="value operator">=</span>
+        </div>
+        <div class="element">
+            <span class="function-definition">
+                <span class="input-function">f</span> x 
+                (<span class="fold">foldr</span> <span class="input-function">f</span> <span class="fold-base">z</span> xs)
+            </span>
+        </div>
+    </div>
+    <div class="fold-example">
+        <div class="element">
+            <span class="value base fold">foldr</span>
+        </div>
+        <div class="element">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="input-function value">(+)</span>
+        </div>
+        <div class="element operator">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="value fold-base">0</span>
+        </div>
+        <div class="element">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="value">[1, 2, 3]</span>
+        </div>
+        <div class="element">
+            <span class="value operator">=</span>
+        </div>
+        <div class="element">
+            <span class="function-definition">
+                1<span class="fold">+ </span>2<span class="fold">+ </span>3<span class="fold">+ </span><span class="fold-base">0</span> = 6
+            </span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+.map {
+    color: $pink0;
+}
+
+.fold {
+    color: $orange;
+}
+
+.fold-base {
+    color: $grey1;
+}
+
+.input-function {
+    color: $purple0;
+}
+
+.foldmap-example {
+    margin: 2em auto;
+}
+
+.fold-example,
+.map-example {
+    margin: 10px auto;
+}
+
+.element {
+    display: inline-block;
+}
+
+.annotation,
+.value {
+    display: block;
+    text-align: center;
+    width: 100px;
+}
+
+.base {
+    width: 30px;
+}
+
+.operator {
+    width: 25px;
+}
+
+.annotation {
+    font-size: 0.7em;
+}
+
+.function-defintion {
+    width: 400px;
+    text-align: left;
+}

@@ -1,0 +1,105 @@
+<div class="foldmap-example">
+    <div class="info-line">
+        <span class="map">MAP</span>: apply a function to each element of a list
+    </div>
+    <div class="map-example">
+        <div class="element">
+            <span class="value base map">map</span>
+        </div>
+        <div class="element operator">
+            <span class="value operator">::</span>
+        </div>
+        <div class="element">
+            <span class="annotation">function</span>
+            <span class="value input-function">(a -> b)</span>
+        </div>
+        <div class="element operator">
+            <span class="value operator">-></span>
+        </div>
+        <div class="element">
+            <span class="annotation">takes initial list</span>
+            <span class="value">[ a ]</span>
+        </div>
+        <div class="element operator">
+            <span class="value operator">-></span>
+        </div>
+        <div class="element">
+            <span class="annotation">returns a new list</span>
+            <span class="value">[ b ]</span>
+        </div>
+    </div>
+    <div class="map-example">
+        <div class="element">
+            <span class="value base map">map</span>
+        </div>
+        <div class="element operator">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="value input-function">_</span>
+        </div>
+        <div class="element">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="value">[ ]</span>
+        </div>
+        <div class="element">
+            <span class="value operator">=</span>
+        </div>
+        <div class="element">
+            <span class="annotation"></span>
+            <span class="value body">[ ]</span>
+        </div>
+    </div>
+    <div class="map-example">
+        <div class="element">
+            <span class="value base map">map</span>
+        </div>
+        <div class="element">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="input-function value">f</span>
+        </div>
+        <div class="element">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="value">(x:xs)</span>
+        </div>
+        <div class="element">
+            <span class="value operator">=</span>
+        </div>
+        <div class="element">
+            <span class="function-definition">
+                <span class="input-function">f</span> x : <span class="map">map</span> <span class="input-function">f</span> xs
+            </span>
+        </div>
+    </div>
+    <div class="map-example">
+        <div class="element">
+            <span class="value base map">map</span>
+        </div>
+        <div class="element">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="input-function value">(+1)</span>
+        </div>
+        <div class="element">
+            <span class="value operator"></span>
+        </div>
+        <div class="element">
+            <span class="value">[1, 2, 3]</span>
+        </div>
+        <div class="element">
+            <span class="value operator">=</span>
+        </div>
+        <div class="element">
+            <span class="function-definition">
+                [1<span class="map">+1</span>, 2<span class="map">+1</span>, 3<span class="map">+1</span>] = [2, 3, 4]
+            </span>
+        </div>
+    </div>
+</div>
