@@ -1,0 +1,95 @@
+<h1>Functors and lifting</h1>
+
+<span class="annotation">Functors are like cranes lifting a function into a context</span>
+
+<img src="./assets/crane.png" class="crane">
+
+<div class="functor-class">
+  class Functor <span class="functor">f</span> where
+  <span class="defintion-line">
+    <span class="functor">fmap</span> :: (a -> b) -> <span class="functor">f</span> a -> <span class="functor">f</span> b
+  </span>
+</span>
+
+<div class="explanation">
+  It's like function application in the context of <span class="functor">f</span>:
+  <div class="type-defintion">
+    <div class="element">
+        <span class="value function">($)</span>
+    </div>
+    <div class="element operator">
+        <span class="value type operator">::</span>
+    </div>
+    <div class="element">
+        <span class="value">(a -> b)</span>
+    </div>
+    <div class="element">
+        <span class="value operator">-></span>
+    </div>
+    <div class="element">
+        <span class="value">&nbsp;&nbsp;a</span>
+    </div>
+    <div class="element">
+        <span class="value operator">-></span>
+    </div>
+    <div class="element">
+        <span class="annotation"></span>
+        <span class="value">&nbsp;&nbsp;b</span>
+    </div>
+  </div>
+  <div class="type-definition">
+    <div class="element">
+        <span class="value function functor">(<$>)</span>
+    </div>
+    <div class="element operator">
+        <span class="value type operator">:: Functor <span class="functor">f</span> =></span>
+    </div>
+    <div class="element">
+        <span class="value">(a -> b)</span>
+    </div>
+    <div class="element">
+        <span class="value operator">-></span>
+    </div>
+    <div class="element">
+        <span class="value"><span class="functor">f</span>&nbsp;a</span>
+    </div>
+    <div class="element">
+        <span class="value operator">-></span>
+    </div>
+    <div class="element">
+        <span class="annotation"></span>
+        <span class="value"><span class="functor">f</span>&nbsp;b</span>
+    </div>
+  </div>
+</span>
+
+<div class="functor-example">
+  <strong>Let's work through an example</strong>
+  <span class="def">let <span class="input-function">replace</span> = const "a" <span class="comment"><- function to apply</span></span>
+  <span class="def">let value = [ Just [ "this", "that" ] ] <span class="comment"><- variable to change</span></span>
+
+  <div class="functor-call">
+    <span class="apply"><span class="input-function">replace</span> value <span class="comment"><- apply to []</span></span>
+    <span class="output">"a"</span>
+  </div>
+
+  <div class="functor-call">
+    <span class="apply"><span class="functor">fmap</span> <span class="input-function">replace</span> value <span class="comment"><- lift once - apply to Just</span></span>
+    <span class="output">[ "a" ]</span>
+  </div>
+
+  <div class="functor-call">
+    <span class="apply">(<span class="functor">fmap</span> . <span class="functor">fmap</span>) <span class="input-function">replace</span> value <span class="comment"><- lift twice - apply to the internal list</span></span>
+    <span class="output">[ Just "a" ]</span>
+  </div>
+
+  <div class="functor-call">
+    <span class="apply">(<span class="functor">fmap</span> . <span class="functor">fmap</span> . <span class="functor">fmap</span>) <span class="input-function">replace</span> value <span class="comment"><- lift thrice - apply to the elements of the internal list</span></span>
+    <span class="output">[ Just [ "a", "a" ] ]</span>
+  </div>
+
+  <div class="functor-call">
+    <span class="apply">(<span class="functor">fmap</span> . <span class="functor">fmap</span> . <span class="functor">fmap</span> . <span class="functor">fmap</span>) <span class="input-function">replace</span> value <span class="comment"><- lift one last time - apply to each letter of each string</span></span>
+    <span class="output">[ Just [ [ "a", "a", "a", "a" ], [ "a", "a", "a", "a" ] ] ]</span>
+  </div>
+</div>

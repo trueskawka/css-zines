@@ -1,0 +1,67 @@
+.zine {
+  padding-bottom: 1em;
+}
+
+.functor {
+  color: $pink0;
+}
+
+.crane {
+  height: 350px;
+  position: absolute;
+  top: 50px;
+  float: right;
+}
+
+.defintion-line {
+  display: block;
+  margin-left: 1em;
+}
+
+.explanation,
+.functor-laws,
+.functor-example,
+.functor-class {
+  margin-top: 1em;
+}
+
+.element,
+.value {
+  display: inline-block;
+}
+
+.function {
+  width: 65px;
+  text-align: center;
+}
+
+.type {
+  width: 120px;
+}
+
+.functor-example {
+  font-size: 0.9em;
+}
+
+.functor-call {
+  margin: 10px 0;
+}
+
+.def,
+.apply,
+.output {
+  display: block;
+}
+
+.output {
+  color: $grey0;
+}
+
+.comment {
+  color: $grey1;
+  font-size: 0.9em;
+}
+
+.input-function {
+  color: $purple0;
+}
